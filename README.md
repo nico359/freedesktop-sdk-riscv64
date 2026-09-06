@@ -1,4 +1,28 @@
-# Welcome to Freedesktop SDK
+## Disclaimer (part I added for this repo)
+
+Wanted to experiment with some Flatpak apps on my MuseBook but while the freedesktop-sdk seems to be built for risc-v, I could not find any actual repo for it. Maybe I am stoopid but just in case someone else gets the same idea, I figured, it might be a good idea to upload it somewhere publicly accessible.
+
+### How to download/install
+First of all this is not optimal but because of the file size limits I figured this might still be the best way without linking an external page for downloading.
+- Download each of the 3 parts for the desired release on the release page
+- Put them back together like this (change the version number in case this is outdated):
+```
+cat flatpak-repo-riscv64-25.08.16.part.* > flatpak-repo-riscv64-25.08.16.tar.gz
+```
+- Then untar the archive:
+```
+tar -zxvf flatpak-repo-riscv64-25.08.16.tar.gz
+```
+- Add the repo locally like this:
+```
+flatpak remote-add --user --no-gpg-verify freedesktop-local repo
+```
+- Install the runtime and/or sdk:
+```
+flatpak install --user freedesktop-local org.freedesktop.Platform org.freedesktop.Sdk
+```
+
+# Welcome to Freedesktop SDK (official Part)
 
 [Freedesktop SDK](https://freedesktop-sdk.io/) is a free, community-developed, and open-source project with a number of components that help you simplify the process of creating different software artifacts. More common use cases include building containers, Flatpak runtimes, or complete operating systems.
 
