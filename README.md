@@ -3,6 +3,16 @@
 Wanted to experiment with some Flatpak apps on my MuseBook but while the freedesktop-sdk seems to be built for risc-v, I could not find any actual repo for it. Maybe I am stoopid but just in case someone else gets the same idea, I figured, it might be a good idea to upload it somewhere publicly accessible.
 
 ### How to download/install
+
+The part below still works but with additional runtimes and my Jupiter 2 on the way I figured this is really not ideal.  
+Therefore I created a repo hosted on a Cloudflare bucket. You can add it with:
+```
+flatpak remote-add flatpak-repo-riscv64 https://flatpak.ambatunat.buzz/repo/nico359-riscv64.flatpakrepo
+```
+Alternatively you can just download the .flatpakrepo file and add it with the graphical app of your choice (e.g. Gnome Software, KDE Discover, etc.):  
+https://flatpak.ambatunat.buzz/repo/nico359-riscv64.flatpakrepo
+
+**The "part below":**  
 First of all this is not optimal but because of the file size limits I figured this might still be the best way without linking an external page for downloading.
 - Download each of the 3 parts for the desired release on the release page
 - Put them back together like this (change the version number in case this is outdated):
